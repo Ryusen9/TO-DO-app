@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="./assets/icons8-todo-list-100.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.6.0/css/all.css" type="text/css">
+    <title>TO-DO</title>
+  </head>
+  <body>
+    <header class="w-full fixed top-0 left-0">
+      <nav class="flex px-8 md:px-10 lg:px-20 xl:px-28 py-2 justify-between items-center">
+        <div class="logo text-2xl lg:text-3xl font-poppins font-semibold">TO-DO</div>
+        <div class="menuIcon cursor-pointer" id="menuAvatar">
+          <div class="relative inline-block">
+            <img class="inline-block size-[38px] lg:size-[46px] rounded-full" src="./assets/download (3).jpeg" alt="Avatar">
+            <span class="absolute bottom-0 end-0 block size-2.5 rounded-full ring-2 ring-white bg-red-400 dark:ring-neutral-900"></span>
+          </div>
+          <div class="absolute top-14 right-6 duration-200 hidden" id="minMenu">
+            <ul class="menu bg-base-200 rounded-box w-56">
+              <li class="menu-title">Menu</li>
+              <li><a class="font-medium"><i class="fa-regular fa-user"></i> Profile</a></li>
+              <li><a class="font-medium"><i class="fa-regular fa-gear"></i> Settings</a></li>
+              <li><a class="font-medium"><i class="fa-regular fa-arrow-right-from-bracket"></i> Log Out</a></li>
+              <li><a class="font-medium" id="closeMenu"><i class="fa-regular fa-x"></i></i> Close Menu</a></li>
+            </ul>
+          </div> 
+        </div>
+      </nav>
+    </header>
+    <main>
+      <section>
+        <div class="container h-[100vh] w-full pt-16 mx-auto flex flex-col justify-between">
+          <div class="text text-center w-full">
+            <p class="text-5xl font-semibold uppercase">All your tasks <br> in one place</p>
+          </div>
+          <div class="h-[77vh] rounded-t-3xl bg-purple-100 p-9 flex flex-col gap-10 items-center">
+            <div class="inputField w-full lg:w-[60%] mx-auto flex gap-3 items-center justify-center">
+              <input type="text" class="input w-[60%] focus:outline-none focus:border-none" placeholder="Enter your task" id="inputField">
+              <button class="btn font-bold uppercase" id="addTask">Add <i class="fa-regular fa-plus-large"></i></button>
+            </div>
+            <div class="tasks flex flex-col gap-4 w-full lg:w-3/6" id="taskContainer">
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="./main.js"></script>
+  </body>
+</html>
